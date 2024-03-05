@@ -1,0 +1,64 @@
+body{
+  height: 100vh;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+/* --- FONTS --- */
+
+/* Brand */
+@font-face {
+  font-family: "brand";
+  src: url('./src/assets/fonts/Anta/Anta/Anta-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Label */
+@font-face {
+  font-family: "Label-Regular";
+  src: url('./src/assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Label-Medium";
+  src: url('./src/assets/fonts/Ubuntu/Ubuntu-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Input */
+@font-face {
+  font-family: "Input-Regular";
+  src: url('./src/assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Input-Medium";
+  src: url('./src/assets/fonts/Montserrat/static/Montserrat-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Input-SemiBold";
+  src: url('./src/assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Input-SemiBold";
+  src: url('./src/assets/fonts/Montserrat/static/Montserrat-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

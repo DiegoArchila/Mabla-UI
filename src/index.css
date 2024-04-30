@@ -1,3 +1,7 @@
+*{
+  font-family: "Parrafs-regular";
+}
+
 body{
   height: 100vh;
 }
@@ -6,6 +10,10 @@ body{
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+main{
+  height: 100%;
 }
 
 
@@ -59,6 +67,14 @@ body{
 @font-face {
   font-family: "Input-SemiBold";
   src: url('./src/assets/fonts/Montserrat/static/Montserrat-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Parrafs */
+@font-face {
+  font-family: "Parrafs-regular";
+  src: url('./src/assets/fonts/Poppins/Poppins-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }

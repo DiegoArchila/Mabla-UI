@@ -1,16 +1,22 @@
 import { useContext } from "react";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, useDisclosure, HStack  } from "@chakra-ui/react";
 import { 
   CiNoWaitingSign, 
   CiSearch,
   CiSquarePlus
  } from "react-icons/ci";
 import { SearchContext } from "../context/SearchContext";
+import NewProduct from "../partials/NewProduct";
 
 export default function Toolbar() {
 
   const {visibleSearch, setVisibleSearch} = useContext<any | null>(SearchContext);
 
+  const { 
+    isOpen: isOpenNewProduct, 
+    onClose: onCloseNewProduct, 
+    onOpen: onOpenNewProduct } = useDisclosure();
+  
   const ToggleVisibleSearch = () => {
     setVisibleSearch((visible)=> !visible)
   }
@@ -41,8 +47,9 @@ export default function Toolbar() {
         />
       </Box>
 
-      <Box>
+      <Box onClick={onOpenNewProduct}>
         <CiSquarePlus size={36} color={"white"} />
+        <NewProduct isOpen={isOpenNewProduct} onClose={onCloseNewProduct}/>
       </Box>
     
     </HStack>

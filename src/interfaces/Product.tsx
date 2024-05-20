@@ -1,3 +1,15 @@
+/*********************************************
+ * On this archive included Interfaces and constants
+ * for any type product data's.
+ * 
+ * This is help to set the length type allowed for any 
+ * product environment.
+ */
+
+
+/**
+ * PRODUCT
+ */
 export interface product{
     id?:number |null,
     name:string,
@@ -14,6 +26,24 @@ export interface product{
     deleted_at?:Date | null
 }
 
+interface CONST_PRODUCT {
+    NAME_MAX_LENGTH:number,
+    DESCRIPTION_MAX_LENGTH: number,
+    SKU_MAX_LENGTH:number,
+    NOTES_MAX_LENGTH?:number
+}
+
+export const PRODUCT:CONST_PRODUCT={
+    NAME_MAX_LENGTH:128,
+    DESCRIPTION_MAX_LENGTH: 256,
+    SKU_MAX_LENGTH: 256
+}
+//------------------------------------------------
+
+
+/**
+ * UNIT MEASURE
+ */
 export interface unitMeasure{
     id?:number | null,
     name:string,
@@ -24,6 +54,22 @@ export interface unitMeasure{
     deleted_at?:Date | null
 }
 
+interface CONST_UNIT_MEASURE{
+    NAME_MAX_LENGTH: number,
+    DESCRIPTION_MAX_LENGTH: number,
+    SYMBOL_MAX_LENGTH: number
+}
+
+export const UNITMEASURE:CONST_UNIT_MEASURE={
+    NAME_MAX_LENGTH:256,
+    DESCRIPTION_MAX_LENGTH:256,
+    SYMBOL_MAX_LENGTH: 10
+}
+//------------------------------------------------
+
+/**
+ * GROUP
+ */
 export interface group{
     id?:number,
     name:string,
@@ -33,6 +79,21 @@ export interface group{
     deleted_at?:Date | null
 }
 
+interface CONST_GROUP{
+    NAME_MAX_LENGTH: number,
+    DSECRIPTION_MAX_LENGTH: number
+}
+
+export const GROUP:CONST_GROUP={
+    NAME_MAX_LENGTH:256,
+    DSECRIPTION_MAX_LENGTH: 256
+}
+
+//------------------------------------------------
+
+/**
+ * IMAGE
+ */
 export interface image{
     id?:number,
     is_main?:boolean | null,
@@ -42,7 +103,11 @@ export interface image{
     updated_at?:Date | null,
     deleted_at?:Date | null
 }
+//------------------------------------------------
 
+/**
+ * SUPPLY
+ */
 export interface supply{
     id?:number,
     name:string,
@@ -52,7 +117,12 @@ export interface supply{
     updated_at?:Date | null,
     deleted_at?:Date | null
 }
+//------------------------------------------------
 
+
+/**
+ * PRODUCTS-SUPPLIES
+ */
 export interface productSupplies{
     id?:number,
     product_id:number,
@@ -65,3 +135,4 @@ export interface productSupplies{
     supply:supply,
     unitMeasure:unitMeasure
 }
+//------------------------------------------------
